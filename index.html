@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>Michis aleatorios</title>
+</head>
+
+<body>
+    <h1>Michis app</h1>
+    <button type="button" onclick="loadRandomMichis(API_URL_RANDOM)" id="act">Actualizar</button>
+
+
+    <section class="random-michis">
+        <h2>Michis aleatorios</h2>
+
+        <span id="error"></span>
+        <div id="cont-fotos">
+            <article class="foto-boton">
+                <img id="img1" alt="Foto gatito aleatorio">
+                <button id="btn-random-1" class="fa-regular fa-star"></button>
+            </article>  
+            <article class="foto-boton">
+                <img id="img2" alt="Foto gatito aleatorio">
+                <button id="btn-random-2" class="fa-regular fa-star"></button>
+            </article>
+        </div>
+
+
+    </section>
+
+    <section id="uploadingMichi">
+        <h2>Sube la foto de tu michi</h2>
+        <form id="uploadingForm">
+            <input id="file" type="file" name="file">
+            <button type="button" onclick="uploadMichiPhoto()">Subir foto de michi</button>
+        </form>
+    </section>
+
+    <section id="favorites-michis">
+        <h2>Michis favoritos</h2>
+
+    </section>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/62965fc0f0.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
